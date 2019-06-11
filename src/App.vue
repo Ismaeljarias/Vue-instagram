@@ -3,9 +3,6 @@
     <Header />
     <Profile />
     <Feed :posts="posts" />
-
-    <button id="show-modal" @click="showModal = true">Show Modal</button>
-    <Modal v-if="showModal" @close="showModal = false" />
   </div>
 </template>
 
@@ -28,12 +25,13 @@ export default {
   data(){
     return { 
       posts: posts,
-      showModal: false
+      showModal: false,
+      currentImage: "Goku"
     }
   },
   methods:{
-    printData(){
-      console.log(posts);
+    newImage(){
+      return this.currentImage = "pepe"
     }
   }
 }

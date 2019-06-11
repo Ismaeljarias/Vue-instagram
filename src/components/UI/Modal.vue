@@ -12,7 +12,8 @@
 
           <div class="modal-body">
             <slot name="body">
-              default body
+              <!-- <img :src="img" alt=""> -->
+              {{ img }}
             </slot>
           </div>
 
@@ -31,8 +32,11 @@
 </template>
 
 <script>
+import Item from '../Feed/Item';
+
 export default {
-  name: 'Modal'
+  name: 'Modal',
+  props:['img']
 }
 </script>
 

@@ -1,10 +1,13 @@
 <template>
   <header>
-    <a href="#" class="logo item">
-      <img src="../../assets/logo.png" class="logo" />
-    </a>
-    <SearchBar></SearchBar>
-    <Menu></Menu>
+    <div class="header_elements">
+      <a href="#" class="logo item">
+        <img src="../../assets/logo.png" class="logo" />
+      </a>
+      <SearchBar></SearchBar>
+      <Menu></Menu>
+      
+    </div> 
   </header>
 </template>
 

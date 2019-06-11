@@ -1,18 +1,16 @@
 #profile{
   margin: 0 auto;
   padding: 20px 0;
+  padding-top: 150px;
   width: 100%;
   max-width: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background-color: olive;
-
   .profile_pic-container{
     width: 40%;
     align-items: center;
-    background-color: red;
     .profile_pic{
       width: 150px;
       height: 150px;
@@ -32,15 +30,15 @@
 
   .profile_content{
     width: 60%;
-    background-color: pink;
 
     &__user-name{
       font-size: 30px;
+      padding: 0;
+      padding-bottom: 20px;
     }
 
     &__user-feed{
       width: 60%;
-      background-color: olive;
       display: flex;
       justify-content: space-between;
       align-items: center;

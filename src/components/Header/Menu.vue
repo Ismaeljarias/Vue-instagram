@@ -1,9 +1,9 @@
 <template>
 <div class="menu">
   <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">News</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="#">explore</a></li>
+    <li><a href="#">activity</a></li>
+    <li><a href="#">profile</a></li>
   </ul>
 </div>
 </template>
