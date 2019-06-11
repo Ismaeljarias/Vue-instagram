@@ -1,0 +1,48 @@
+#profile{
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: olive;
+
+  .profile_pic-container{
+    width: 40%;
+    align-items: center;
+    background-color: red;
+    .profile_pic{
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+      -webkit-border-radius: 100%;
+      border-radius: 100%;
+      overflow: hidden;
+  
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  
+
+  .profile_content{
+    width: 60%;
+    background-color: pink;
+
+    &__user-name{
+      font-size: 30px;
+    }
+
+    &__user-feed{
+      
+    }
+
+
+  }
+
+}
