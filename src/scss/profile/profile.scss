@@ -39,7 +39,23 @@
     }
 
     &__user-feed{
-      
+      width: 60%;
+      background-color: olive;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__info{
+      width: 60%;
+      padding: 15px 0;
+      .fullname{
+        font-size: 20px;
+      }
+      .description{
+        font-size: 15px;
+        padding: 10px 0;
+      }
     }
 
 
