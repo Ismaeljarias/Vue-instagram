@@ -43,6 +43,7 @@
       margin: 0;
     }
 
+
     .profile-user-settings,
     .profile-stats,
     .profile-bio {
@@ -106,6 +107,28 @@
         font-weight: 600;
     }
 
+  }
+
+  @media(max-width: 640px){
+    .profile{
+      display: block;
+      
+      .profile-image{
+        margin: 0 auto;
+      }
+
+      .profile-user-settings{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+    }
+    .profile-edit-btn{
+      margin: 0;
+      margin-top: 16px;
+    }
   }
   
 

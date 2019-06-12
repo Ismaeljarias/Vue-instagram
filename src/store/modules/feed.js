@@ -11,10 +11,12 @@ const getters = {
 };
 
 const actions = {
-  async fetchFeeds({commit}){
-    const response = await axios.get('https://jsonplaceholder.typicode.com/photos?_limit=15');
+  async fetchFeeds({commit}, i){
+    const response = await axios.get(`https://jsonplaceholder.typicode.com/photos?_limit=${i}`);
     commit('setFeeds', response.data);
   },
+
+
 
 };
 

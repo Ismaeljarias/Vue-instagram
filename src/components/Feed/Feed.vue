@@ -28,7 +28,7 @@
     </div>
     <!-- End of container -->
     <!-- use the modal component, pass in the prop -->
-    <Modal :item="itemToShow" v-if="showModal" @click="showModal = false" @close="showModal = false" />
+    <Modal :item="itemToShow" v-if="showModal" @close="showModal = false" />
   </div>
 </template>
 
@@ -45,6 +45,7 @@ export default {
     return{
       showModal: false,
       itemToShowId: null,
+      counter: 6
     }
   },
   methods:{
@@ -52,6 +53,15 @@ export default {
     modalToShow(id){
       this.showModal = true;
       this.itemToShowId = id;
+    },
+
+    scroll(){
+      window.onscroll = () => {
+        if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+          this.counter += 6;
+          this.fetchFeeds(this.counter);
+        }
+      };
     }
   },
   computed: {
@@ -68,8 +78,11 @@ export default {
       return itemToShow;
     }
   },
+  mounted(){
+    this.scroll();
+  },
   created(){
-    this.fetchFeeds();
+    this.fetchFeeds(this.counter);
   }
 }
 </script>
