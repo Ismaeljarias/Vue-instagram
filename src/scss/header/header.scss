@@ -5,8 +5,9 @@ header {
   border-bottom: 1px solid #ccc;
   position: fixed;
   background-color: #fff;
+  z-index: 99999;
 
-  .header_elements{
+  .container{
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
