@@ -1,9 +1,7 @@
 import axios from 'axios';
 
 const state = {
-  feeds: [],
-  selectedImage: '',
-  showModal: false
+  feeds: []
 };
 
 const getters = {
@@ -15,31 +13,13 @@ const getters = {
 const actions = {
   async fetchFeeds({commit}){
     const response = await axios.get('https://jsonplaceholder.typicode.com/photos?_limit=15');
-
     commit('setFeeds', response.data);
   },
-
-  async getSelected({commit}, e){
-  //  Get selected Element
-    const currentImage = e.srcElement.currentSrc;
-    console.log(e);
-    // commit('setImage', currentImage);
-    
-  },
-
-  async showModal({commit}){
-    state.showModal = !state.showModal;
-    
-    commit('setModal', !state.showModal);
-  }
-
 
 };
 
 const mutations = {
-  setFeeds: (state, feeds) => (state.feeds = feeds),
-  setImage: (state, selectedImage) => (state.selectedImage = selectedImage),
-  setModal: (state, setModal) => (state.showModal = !setModal)
+  setFeeds: (state, feeds) => (state.feeds = feeds)
 };
 
 export default {

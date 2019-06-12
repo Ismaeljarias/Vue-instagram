@@ -5,7 +5,7 @@
         <div class="modal-container">
 
           <div class="col selected">
-            <img :src="selected" alt="" />
+            <img v-if="item != null" :src="item.url" alt="" />
           </div>
 
           <div class="col profile">
@@ -25,7 +25,7 @@
 
           <div class="modal-footer">
             <slot name="footer">
-              <button class="modal-default-button" @click="showModal">
+              <button class="modal-default-button" @click="$emit('close')"> 
                 OK
               </button>
             </slot>
@@ -38,14 +38,15 @@
 </template>
 
 <script>
-import {mapGetters, mapActions} from 'vuex';
 
 export default {
   name: 'Modal',
-  methods:{
-    ...mapActions(['showModal'])
-  },
-  computed: mapGetters(['selected', 'modal'])
+  props:['item'],
+  data(){
+    return{
+      showModal: false
+    }
+  }
 }
 </script>
 
