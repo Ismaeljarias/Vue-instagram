@@ -26,7 +26,7 @@
                 <li>
                   <div class="comments">
                     <div class="profile_pic">
-                      <img src="https://scontent-mia3-1.cdninstagram.com/vp/ee6c99f7305aaedef334cb8488b88963/5D8EA0B3/t51.2885-19/s320x320/46918899_287793308747889_1515852035029729280_n.jpg?_nc_ht=scontent-mia3-1.cdninstagram.com" alt="Profile Pics">
+                      <img :src="item.url" alt="Profile Pics">
                     </div>
                     <div class="comment_data">
                       <h2>User Name</h2>
