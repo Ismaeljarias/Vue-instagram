@@ -86,7 +86,8 @@
       padding: 20px;
       overflow-x: hidden;
       overflow-y: scroll;
-      max-height: 355px;
+      height: 350px;
+      max-height: calc(100% - 72px);
       ul{
         list-style: none;
         padding: 0;
@@ -130,6 +131,7 @@
         top: 0;
         left: 0;
         padding-top: 5px;
+        height: 80px;
       }
     }
 
