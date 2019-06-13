@@ -24,48 +24,100 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   transition: all .3s ease;
   font-family: Helvetica, Arial, sans-serif;
-  display: flex;
-  position: relative;
 
-  img{
-    width: 100%;
-  }
-
-  .container{
-    display: flex;
-    flex-flow: column nowrap;
+  article, header{
+    position: relative;
     margin: 0;
-    padding: 20px;
-    .profile_container{
-      display: flex;
-      .profile_pic{
-        width: 40px;
-        height: 40px;
-        overflow: hidden;
-        border-radius: 150px;
-      }
-      .username{
-        font-size: 14px;
-        padding-left: 10px;
-        display: block;
-      }
-      .location{
-        display: flex;
-        font-size: 10px;
-      }
-  
-    }
-  
-    .modal-footer{
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-end;
-      
-      .comment{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    box-sizing: border-box;
 
+    .header{
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-left: 1px solid #efefef;
+      height: 72px;
+      padding: 16px;
+      width: 335px;
+
+      .profile_pic{
+        display: block;
+        flex: none;
+        width: 42px; 
+        height: 42px;
+        border-radius: 150px;
+        overflow: hidden;
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+      .user_data{
+        position: absolute;
+        margin: 5px 55px;
+        .username{
+          h2{
+            display: inline;
+          }
+        }
+      }
+
+    }
+    .img_container{
+      background-color: #000;
+      margin-right: 335px;
+      min-height: 335px;
+      .image_modal{
+        width: 100%;
+        height: 100%;
       }
     }
+    .comment_area{
+      position: absolute;
+      right: 0;
+      top: 72px;
+      box-sizing: border-box;
+      width: 335px;
+      display: flex;
+      padding: 20px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      max-height: 355px;
+      ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li{
+          padding-top: 20px;
+        }
+      }
+
+      .comments{
+        display: flex;
+  
+        .profile_pic{
+          width: 42px;
+          height: 42px;
+          overflow: hidden;
+          border-radius: 150px;
+          img{
+            width: 100%;
+          }
+        }
+        .comment_data{
+          margin-left: 10px;
+          h2{
+            margin: 0;
+          }
+        }
+      }
+    }
+
+
   }
+
 
 }
 
@@ -121,4 +173,20 @@
 .modal-leave-active .modal-container {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+.modal-backdrop {
+  background-color: transparent;
+}
+.modal-backdrop-transparent {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1000;
 }
