@@ -1,6 +1,7 @@
 <template>
   <div class="searchBar">
-    <input placeholder="Search" />
+    <i class="fas fa-search icon"></i>
+    <input class="input-field" type="text" placeholder="Search" />
   </div>
 </template>
 

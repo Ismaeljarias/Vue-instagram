@@ -16,7 +16,7 @@
 }
 
 .modal-container {
-  width: 900px;
+  width: 70%;
   margin: 0px auto;
   // padding: 20px 30px;
   background-color: #fff;
@@ -25,40 +25,55 @@
   transition: all .3s ease;
   font-family: Helvetica, Arial, sans-serif;
   display: flex;
+  position: relative;
 
   img{
     width: 100%;
   }
 
-  .col{
-    float: left;
-  }
-
-  .selected{
-    // flex-grow: 1;
-  }
-  
-  .profile{
-    padding: 20px 0 0 20px;
-    flex-grow: 1;
-    .profile_pic{
-      width: 40px;
-      height: 40px;
-      overflow: hidden;
-      border-radius: 150px;
-      float: left;
-    }
-    .username{
-      font-size: 14px;
-      padding-left: 10px;
-      float: left;
-      display: block;
-    }
-    .location{
+  .container{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0;
+    padding: 20px;
+    .profile_container{
       display: flex;
+      .profile_pic{
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        border-radius: 150px;
+      }
+      .username{
+        font-size: 14px;
+        padding-left: 10px;
+        display: block;
+      }
+      .location{
+        display: flex;
+        font-size: 10px;
+      }
+  
+    }
+  
+    .modal-footer{
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      
+      .comment{
+
+      }
     }
   }
 
+}
+
+@media(max-width: 650px){
+  .modal-container{
+    width: 90%;
+    display: block;
+  }
 }
 
 .modal-header h3 {
@@ -71,7 +86,18 @@
 }
 
 .modal-default-button {
-  float: right;
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  
+  background-color: transparent; 
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
 }
 
 /*

@@ -1,22 +1,20 @@
 import axios from 'axios';
 
 const state = {
-  feeds: []
+  feeds: [],
+  selectedImage: []
 };
 
 const getters = {
   allFeeds: (state) => state.feeds,
-  selected: (state) => state.selectedImage,
-  modal: (state) => state.showModal
+  selected: (state) => state.selectedImage
 };
 
 const actions = {
   async fetchFeeds({commit}, i){
     const response = await axios.get(`https://jsonplaceholder.typicode.com/photos?_limit=${i}`);
     commit('setFeeds', response.data);
-  },
-
-
+  }
 
 };
 

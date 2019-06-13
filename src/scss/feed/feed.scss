@@ -35,6 +35,15 @@
       }
     }
   }
+
+  @media(max-width: 605px){
+    .feed_menu {
+      ul{
+        display: none;
+      }
+    }
+  }
+  
   .gallery {
     display: flex;
     flex-wrap: wrap;

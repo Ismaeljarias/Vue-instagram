@@ -23,18 +23,24 @@ header {
     }
   
     .searchBar{
+      display: flex;
       width: 30%;
-      input{
-        width: 100%;
+      margin-bottom: 15px;
+      .icon {
+        padding: 10px;
+        background: #ccc;
+        color: white;
+        min-width: 40px;
         text-align: center;
-        padding: 8px 10px;
-        margin: 8px 0;
-        box-sizing: border-box;
-    
-        background-color: white;
-        background-image: url('~@/assets/search.png');
-        background-position: 10px 10px; 
-        background-repeat: no-repeat;
+      }
+      .input-field {
+        width: 100%;
+        padding: 10px;
+        outline: none;
+        border: 1px solid #ccc
+      }
+      .input-field:focus {
+        border: 1px solid dodgerblue;
       }
     }
   
@@ -52,9 +58,23 @@ header {
             display: block;
             color: #000;
             text-align: center;
-            padding: 14px 16px;
+            padding: 10px;
             text-decoration: none;
           }
+        }
+      }
+      .icon{
+        // padding: 10px;
+        color: gray;
+        min-width: 50px;
+        text-align: center;
+        font-size: 30px
+      }
+
+      @media(max-width: 350px){
+        .icon{
+          font-size: 30px;
+          min-width: 30px;
         }
       }
   
@@ -66,9 +86,9 @@ header {
       width: 100%;
       max-width: 100%;
       padding: 0;
-    }
-    .searchBar{
-      display: none;
+      .searchBar{
+        display: none;
+      }
     }
   }
 
